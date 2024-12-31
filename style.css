@@ -1,0 +1,254 @@
+@font-face {
+  font-family: Hanken;
+  src: url(fonts/HankenGrotesk-VariableFont_wght.ttf);
+}
+html, body {
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-y: hidden;
+}
+.component {
+  height: 280px;
+  width: 400px;
+  box-shadow: 5px 5px 40px #00000015;
+  border-radius: 18px;  
+  display: grid;
+  grid-template-columns: repeat(50%, 1fr);
+}
+#results {
+  grid-column: 1;
+  background-image: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+  border-radius: 18px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center
+}
+#results div {
+  position: absolute;
+  margin: auto;
+  height: 250px;
+  width: 130px;
+  display: grid;
+  grid-template-rows: 14% 50% 10% 20%;
+}
+#results div h2 {
+  margin: auto;
+  color: #ffffffa1;
+  font-size: 0.8rem;
+  font-family: Hanken;
+}
+#results div #score {
+  position: relative;
+  border-radius: 100%;
+  background-image: linear-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+  height: 110px;
+  width: 110px;
+  display: grid;
+  grid-template-rows: 68% 32%;
+  gap: 0;
+}
+#results div #score #digit {
+  padding: 0;
+  margin: auto;
+  margin-bottom: 0;
+  color: #FFFFFF;
+  font-family: Hanken;
+  font-size: 2.4rem;
+  font-weight: 800;
+}
+#results div #score #outof {
+  padding: 0;
+  margin: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  color:#ffffff68;
+  font-family: Hanken;
+  font-size: 0.6rem;
+  font-weight: 500;
+}
+#results div #note {
+  margin: auto;
+  color: #FFFFFF;
+  font-family: Hanken;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+#results div #message {
+  margin: auto;
+  margin-bottom: 0%;
+  color: #FFFFFFa0;
+  font-size: 0.6rem;
+  text-align: center;
+  font-family: Hanken;
+}
+#summary {
+  grid-column: 2;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center
+}
+#summary-menu {
+  position: absolute;
+  margin: auto;
+  display: grid;
+  grid-template-rows: 20% 50% 30%;
+  grid-template-columns: 100%;
+  width: 150px;
+  height: 280px;
+}
+#title {
+  grid-row: 1;
+  color: hsl(224, 30%, 27%);
+  padding: 0px;
+  margin-left: 0%;
+  position: relative;
+  font-family: Hanken;
+  font-size: 0.9rem;
+}
+#layout {
+  display: grid;
+  grid-template-columns:100%;
+  grid-template-rows: repeat(25%, 1fr);
+  grid-row: 2;
+  width: 150px;
+  height: 150px;
+  margin: auto;
+}
+#reaction {
+  grid-row: 1;
+  color: hsl(0, 100%, 67%);
+  background-color: hsla(0, 100%, 67%, 0.08)
+}
+#memory {
+  grid-row: 2;
+  color: hsl(39, 100%, 56%);
+  background-color: hsla(39, 100%, 56%, 0.08);
+}
+#verbal {
+  grid-row: 3;
+  color: hsl(166, 100%, 37%);
+  background-color: hsl(166, 100%, 37%, 0.08);
+}
+#visual {
+  grid-row: 4;
+  color: hsl(234, 85%, 45%);
+  background-color: hsl(234, 85%, 45%, 0.08);
+}
+.text-box {
+  display: grid;
+  grid-template-rows: 100%;
+  grid-template-columns: 15% 60% 25%;
+  height: 30px;
+  width: 100%;
+  border-radius: 5px;
+  font-size: 0.6rem;
+}
+.icon {
+  grid-column: 1;
+  margin: auto;
+  height: 0.8rem;
+  width: 0.8rem;
+}
+.text {
+  grid-column: 2;
+  margin: auto;
+  margin-left: 0;
+  font-family: Hanken;
+}
+.nout100 {
+  margin: auto;
+  grid-column: 3;
+  font-family: Hanken;
+}
+.count {
+  font-family: Hanken;
+  font-weight: 500;
+  color: hsl(224, 30%, 27%);
+}
+.out {
+  font-family: Hanken;
+  color: hsla(0, 0%, 0%, 0.408);
+}
+#continue {
+  background-color: hsl(224, 30%, 27%);
+  border-radius: 20px;
+  border: 0px;
+  color: #FFFFFF;
+  font-family: Hanken;
+  font-size: 0.6rem;
+  font-weight: 700;
+  margin: auto;
+  width: 100%;
+  height: 30px;
+}
+#continue:hover {
+  background-image: linear-gradient(rgb(90, 57, 225), rgb(16, 13, 203));
+}
+#continue:active{
+  background-image: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+}
+/* responsive for the phones in vertical mode */
+@media screen and (max-width: 480px){
+  .component {
+    width: 100vw;
+    height: 100vh;
+    grid-template-columns: 100%;
+    grid-template-rows: 40vh 60vh;
+    box-shadow: none;
+}
+  #results {
+    grid-row: 1;
+    grid-column: 1;
+    border-top-left-radius: 0%;
+    border-top-right-radius: 0%;
+    width: 100vw;
+    height: 40vh
+}
+  #summary {
+    grid-column: 1;
+    grid-row: 2;
+    width: 100%;
+    height: 60vh;
+    padding-top: 10px;
+}
+  #summary-menu {
+    width: 90%;
+    height: 60%;
+    grid-template-rows: 10% 60% 30%;
+}
+  #results-menu{
+    width: 35vw;
+  }
+  #layout {
+    width: 100%;
+    height: 100%;
+    gap: 10px;
+    padding-top: 20px;
+  }
+  .text-box {
+    height: 50px;
+  }
+  #continue {
+    height: 45px;
+    font-size: 1rem;
+  }
+  .text-box{
+    font-size: 0.8rem;
+  }
+}
+/* reponsive for the phones in horizontal mode */
+@media screen and (max-height: 480px){
+  .component {
+    width: 100vw;
+    height: 100vh;
+  }
+  #results {
+    border-top-left-radius: 0%;
+    border-bottom-left-radius: 0%;
+  }
+}
